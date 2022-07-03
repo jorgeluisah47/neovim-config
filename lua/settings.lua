@@ -1,3 +1,4 @@
+
 vim.cmd([[
 
   set number
@@ -13,11 +14,4 @@ vim.cmd([[
   set nowrap
   set splitbelow
 
-  so ~/.config/nvim/lua/plugins.vim
-  so ~/.config/nvim/lua/plugins-config.vim
-  so ~/.config/nvim/lua/completion.vim
-
-  " Mappings
-  let mapleader=" "
-  nmap <Leader>nt :NERDTreeToggle<CR>
 ]])

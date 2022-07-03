@@ -1,6 +1,4 @@
-
-.vim/autoload/plug.vim
-
 after/plugins/*
+plugin/*
 
 CHANGELOG.md
