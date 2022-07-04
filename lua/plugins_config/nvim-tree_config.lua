@@ -13,6 +13,10 @@ require("nvim-tree").setup({
     group_empty = true,
   },
   filters = {
-    dotfiles = true,
+    dotfiles = false,				-- Habilita visión de Dotfiles
+  },
+  git = {
+    enable = true,				-- Habilita la integración con GIT
+    ignore = false,				-- Habilita visión de archivos off-track
   },
 })
