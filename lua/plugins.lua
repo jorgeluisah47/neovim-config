@@ -1,18 +1,18 @@
 
-require'plugins_config.nvim-tree_config'
--- require'plugins_config.nvim_cmp.lua'
-
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
   
+  -- Manejador de paquetes (Autogestion)
   use 'wbthomason/packer.nvim'
   
-  -- Themes:	Everforest (Current)
-  -- 		Gruvbox
-  use 'sainnhe/everforest'
-  --use 'ellisonleao/gruvbox.nvim'
+  -- IDE
 
+  -- Themes:	Everforest (Current)
+  use 'sainnhe/everforest'
+  use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
+  use 'tpope/vim-fugitive'
   use {
     'kyazdani42/nvim-tree.lua',
     requires = { 
@@ -20,14 +20,14 @@ return require('packer').startup(function()
     },
     tag = 'nightly' 
   }
-
   use 'christoomey/vim-tmux-navigator'
 
+  -- LSP
   use 'neovim/nvim-lspconfig'
-
-  use 'hrsh7th/nvim-cmp'		-- Collection of configurations for built-in LSP client
-  use 'hrsh7th/cmp-nvim-lsp'		-- LSP source for nvim-cmp
-  use 'saadparwaiz1/cmp_luasnip'	-- Snippets source for nvim-cmp
-  use 'L3MON4D3/LuaSnip'		-- Snippets plugin
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
 
 end)
